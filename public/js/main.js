@@ -216,13 +216,49 @@ if (projectImages.length > 0) {
 
 // Skills page reveal animation
 const skillCards = document.querySelectorAll(".skill-card");
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                }
-            });
-        }, {
-            threshold: .2
-        });
-        skillCards.forEach(card => observer.observe(card));
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, {
+    threshold: .2
+});
+skillCards.forEach(card => observer.observe(card));
+
+
+
+
+
+const autoSlideImages = document.querySelectorAll(".project-image");
+const autoSlideDots = document.querySelectorAll(".dot");
+
+let autoSlideIndex = 0;
+
+function showProjectImage(index) {
+    autoSlideImages.forEach(img => {
+        img.classList.remove("active");
+    });
+
+    autoSlideDots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    autoSlideIndex = index;
+
+    autoSlideImages[autoSlideIndex].classList.add("active");
+    autoSlideDots[autoSlideIndex].classList.add("active");
+}
+
+function autoPlayProjectImages() {
+    autoSlideIndex++;
+
+    if (autoSlideIndex >= autoSlideImages.length) {
+        autoSlideIndex = 0;
+    }
+
+    showProjectImage(autoSlideIndex);
+}
+
+setInterval(autoPlayProjectImages, 3000);
