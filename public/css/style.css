@@ -128,8 +128,8 @@ nav a {
     padding: 8px 12px;
     border-radius: 99px;
     color: var(--mu);
-    font-size: .9rem;
-    transition: .2s
+    font-size: rem;
+    transition: .2s;
 }
 
 nav a:hover {
@@ -1586,9 +1586,9 @@ noscript {
 
 .project-slider {
     position: relative;
-    width: 100%;
-    height: 605px;
-    margin-top: 28px;
+    width: 75%;
+    height: 500px;
+    margin: 10px auto 7px;
     overflow: hidden;
     border-radius: 18px;
     background: linear-gradient(135deg, #0ea5e9, #6d5dfc);
