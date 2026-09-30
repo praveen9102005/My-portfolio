@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>ProjectFlow Management | Praveen S</title>
+    <meta name="description" content="ProjectFlow Management – a project and task management web application developed by Praveen S.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <div id="bar"></div>
+    <header id="hd">
+        <div class="wrap bar">
+            <a class="logo" href="../index.html">praveen<i>.</i>s</a>
+            <nav id="nav" aria-label="Main">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../skills.html">Skills</a>
+                <a href="../projects.html">Projects</a>
+                <a href="../education.html">Education</a>
+                <a href="../Intern_experience.html">Intern_Experiences</a>
+                <a href="../certifications.html">Certifications</a>
+                <a href="../resume.html">Resume</a>
+                <a href="../contact.html">Contact</a>
+            </nav>
+            <a class="btn p r" href="../resume.html">Resume</a>
+            <button id="ham" aria-label="Open menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+    <main>
+        <section class="pg wrap det">
+            <a class="btn" href="../projects.html">← Back to projects</a>
+            <h1 style="font-size:clamp(2rem,5vw,3.4rem);margin-top:26px">ProjectFlow Management</h1>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span></div>
+            <<div class="project-slider">
+                <div class="slider-images">
+                    <img src="../../project_photo/PG1.png" class="project-image active" alt="ProjectFlow Management - Image 1">
+                    <img src="../../project_photo/PG2.png" class="project-image" alt="ProjectFlow Management - Image 2">
+                    <img src="../../project_photo/PG3.png" class="project-image" alt="ProjectFlow Management - Image 3">
+                    <img src="../../project_photo/PG4.png" class="project-image" alt="ProjectFlow Management - Image 4">
+                </div>
+                <button class="slider-btn prev" onclick="changeProjectImage(-1)" aria-label="Previous image">❮</button>
+                <button class="slider-btn next" onclick="changeProjectImage(1)" aria-label="Next image">❯</button>
+                <div class="image-counter"><span id="currentImage">1</span> / <span id="totalImages">4</span></div>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="showProjectImage(0)"></span>
+                    <span class="dot" onclick="showProjectImage(1)"></span>
+                    <span class="dot" onclick="showProjectImage(2)"></span>
+                    <span class="dot" onclick="showProjectImage(3)"></span>
+                </div>
+                </div>
+
+                </div>
+                <h2>Overview</h2>
+                <p>ProjectFlow Management is a web-based project management platform designed to organize projects, tasks, team activities, and project progress in one centralized workspace. The system provides a structured way for users to manage their
+                    work and keep track of project activities.</p>
+                <h2>Problem</h2>
+                <p>Managing multiple projects and tasks through separate tools can make it difficult to track progress, organize responsibilities, and maintain a clear overview of ongoing work. Teams need a centralized platform where project information
+                    and tasks can be managed efficiently.</p>
+                <h2>Solution</h2>
+                <p>ProjectFlow provides a centralized project management interface where users can organize projects, manage tasks, monitor progress, and maintain project-related information. The application is designed to make project workflows easier to
+                    understand and manage.</p>
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Project creation and management</li>
+                    <li>Task organization and tracking</li>
+                    <li>Project progress monitoring</li>
+                    <li>Structured project workflow</li>
+                    <li>User-friendly dashboard interface</li>
+                    <li>Responsive web design</li>
+                    <li>Backend API integration</li>
+                    <li>Database-driven project information</li>
+                </ul>
+                <h2>System Architecture</h2>
+                <div class="arch"><span>Frontend</span><i>→</i><span>REST API</span><i>→</i><span>Node.js / Express</span><i>→</i><span>MongoDB</span></div>
+                <h2>Technology Stack</h2>
+                <ul>
+                    <li><strong>HTML5</strong> – Structure and organization of the web interface</li>
+                    <li><strong>CSS3</strong> – Responsive layouts and visual design</li>
+                    <li><strong>JavaScript</strong> – Client-side interactions and application functionality</li>
+                    <li><strong>Node.js</strong> – Server-side application environment</li>
+                    <li><strong>Express.js</strong> – Backend API and server routing</li>
+                    <li><strong>MongoDB</strong> – Storage for project and task-related data</li>
+                </ul>
+                <h2>Project Workflow</h2>
+                <div class="arch"><span>Create Project</span><i>→</i><span>Add Tasks</span><i>→</i><span>Assign & Manage</span><i>→</i><span>Track Progress</span><i>→</i><span>Complete</span></div>
+                <h2>Challenges</h2>
+                <p>One of the main challenges was designing a clear workflow for managing projects and tasks while keeping the interface simple and easy to navigate. Connecting the frontend with backend APIs and maintaining project data also required careful
+                    application structure.</p>
+                <h2>What I Learned</h2>
+                <ul>
+                    <li>Building a structured full-stack web application</li>
+                    <li>Designing project and task management workflows</li>
+                    <li>Connecting frontend interfaces with backend APIs</li>
+                    <li>Working with Node.js and Express.js</li>
+                    <li>Managing application data using MongoDB</li>
+                    <li>Organizing a project using Git and GitHub</li>
+                </ul>
+                <h2>Future Improvements</h2>
+                <p>Future versions can include real-time collaboration, role-based access control, notifications, project analytics, file sharing, team chat, calendar integration, and advanced dashboards for monitoring project performance.</p>
+                <div class="row"><a class="btn" href="https://github.com/praveen9102005/projectflow-management" target="_blank" rel="noopener">GitHub Repository</a><a class="btn p" href="../contact.html">Ask for a demo</a></div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            <div><b style="color:var(--tx)">Praveen S</b><br>Designing, developing, and turning ideas into reality.</div>
+            <div class="soc" style="margin:0">
+                <a href="https://github.com/praveen9102005" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+                <a href="https://www.linkedin.com/in/praveen-s-cse/" target="_blank" rel="noopener" aria-label="LinkedIn">In</a>
+                <a href="mailto:lettertopraveen2005@gmail.com" aria-label="Email">@</a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            </div>
+            <div>© 2026 Praveen S. All rights reserved.</div>
+        </div>
+    </footer>
+    <button id="top" aria-label="Back to top">↑</button>
+    <div id="toast" role="status"></div>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

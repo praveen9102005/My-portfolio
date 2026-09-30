@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>About | Praveen S</title>
+    <meta name="description" content="Praveen S — Computer Science Engineering student and Full Stack Developer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .about-hero {
+            position: relative;
+            padding: 65px 0 40px;
+            overflow: hidden;
+        }
+        
+        .about-hero:before {
+            content: "";
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background: rgba(77, 225, 255, .1);
+            filter: blur(100px);
+            left: -150px;
+            top: -140px;
+            pointer-events: none;
+        }
+        
+        .about-hero:after {
+            content: "";
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: rgba(139, 123, 255, .1);
+            filter: blur(100px);
+            right: -130px;
+            bottom: -150px;
+            pointer-events: none;
+        }
+        
+        .about-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            border: 1px solid rgba(77, 225, 255, .25);
+            border-radius: 30px;
+            background: rgba(77, 225, 255, .06);
+            color: var(--c1);
+            font-size: .82rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+        
+        .about-badge span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 12px #22c55e;
+        }
+        
+        .about-hero h1 {
+            font-family: var(--h);
+            font-size: clamp(2.6rem, 6vw, 4.7rem);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            max-width: 900px;
+        }
+        
+        .about-hero h1 span {
+            background: linear-gradient(90deg, var(--c1), var(--c2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .about-hero p {
+            max-width: 720px;
+            margin-top: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--mu);
+        }
+        
+        .about-layout {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 25px;
+            align-items: stretch;
+        }
+        
+        .about-main {
+            padding: 32px;
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .018));
+            backdrop-filter: blur(14px);
+        }
+        
+        .about-main h2 {
+            font-family: var(--h);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+        
+        .about-main p {
+            font-size: .92rem;
+            line-height: 1.85;
+            color: var(--mu);
+            margin-top: 13px;
+        }
+        
+        .about-main p:first-of-type {
+            margin-top: 0;
+        }
+        
+        .about-highlight {
+            margin-top: 25px;
+            padding: 18px;
+            border-left: 3px solid var(--c1);
+            border-radius: 0 14px 14px 0;
+            background: rgba(77, 225, 255, .05);
+        }
+        
+        .about-highlight p {
+            margin: 0;
+            color: var(--tx);
+            font-size: .88rem;
+        }
+        
+        .profile-card {
+            position: relative;
+            padding: 30px;
+            border: 1px solid rgba(77, 225, 255, .18);
+            border-radius: 24px;
+            background: linear-gradient(145deg, rgba(77, 225, 255, .07), rgba(139, 123, 255, .05));
+            overflow: hidden;
+        }
+        
+        .profile-card:before {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: var(--c1);
+            opacity: .06;
+            filter: blur(50px);
+            right: -70px;
+            top: -70px;
+        }
+        
+        .profile-circle {
+            width: 78px;
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--c1), var(--c2));
+            font-family: var(--h);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #07101a;
+            margin-bottom: 20px;
+        }
+        
+        .profile-card h2 {
+            font-family: var(--h);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .profile-role {
+            color: var(--c1);
+            font-size: .85rem;
+            font-weight: 600;
+        }
+        
+        .profile-card p {
+            margin-top: 16px;
+            font-size: .85rem;
+            line-height: 1.7;
+            color: var(--mu);
+        }
+        
+        .profile-info {
+            display: grid;
+            gap: 10px;
+            margin-top: 22px;
+        }
+        
+        .profile-info div {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .07);
+            font-size: .78rem;
+        }
+        
+        .profile-info span:first-child {
+            color: var(--mu);
+        }
+        
+        .profile-info span:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+        
+        .stats-section {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        
+        .stat-card {
+            padding: 22px 15px;
+            text-align: center;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, .035);
+            transition: .3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(77, 225, 255, .3);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .18);
+        }
+        
+        .stat-card strong {
+            display: block;
+            font-family: var(--h);
+            font-size: 1.65rem;
+            background: linear-gradient(90deg, var(--c1), var(--c2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .stat-card span {
+            display: block;
+            margin-top: 3px;
+            font-size: .72rem;
+            color: var(--mu);
+        }
+        
+        .focus-section {
+            margin-top: 55px;
+        }
+        
+        .section-heading {
+            margin-bottom: 22px;
+        }
+        
+        .section-heading h2 {
+            font-family: var(--h);
+            font-size: 1.7rem;
+            margin: 0;
+        }
+        
+        .section-heading p {
+            margin-top: 5px;
+            font-size: .84rem;
+            color: var(--mu);
+        }
+        
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+        
+        .focus-card {
+            position: relative;
+            padding: 25px;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .015));
+            overflow: hidden;
+            transition: .35s ease;
+        }
+        
+        .focus-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(77, 225, 255, .3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .2);
+        }
+        
+        .focus-number {
+            font-family: var(--h);
+            font-size: .75rem;
+            color: var(--c1);
+            font-weight: 700;
+        }
+        
+        .focus-icon {
+            font-size: 1.8rem;
+            margin: 12px 0;
+        }
+        
+        .focus-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+        
+        .focus-card p {
+            font-size: .8rem;
+            line-height: 1.65;
+            color: var(--mu);
+        }
+        
+        .tech-section {
+            margin-top: 55px;
+            padding: 30px;
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            background: rgba(255, 255, 255, .025);
+        }
+        
+        .tech-section h2 {
+            font-family: var(--h);
+            font-size: 1.5rem;
+            margin-bottom: 7px;
+        }
+        
+        .tech-section>p {
+            font-size: .82rem;
+            color: var(--mu);
+            margin-bottom: 20px;
+        }
+        
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+        
+        .tech-list span {
+            padding: 9px 13px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            background: rgba(255, 255, 255, .04);
+            font-size: .75rem;
+            transition: .3s ease;
+        }
+        
+        .tech-list span:hover {
+            transform: translateY(-3px);
+            border-color: var(--c1);
+            color: var(--c1);
+        }
+        
+        .goal-section {
+            margin-top: 25px;
+            padding: 30px;
+            border-radius: 24px;
+            border: 1px solid rgba(139, 123, 255, .2);
+            background: linear-gradient(135deg, rgba(139, 123, 255, .08), rgba(77, 225, 255, .05));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .goal-section h2 {
+            font-family: var(--h);
+            font-size: 1.45rem;
+            margin-bottom: 7px;
+        }
+        
+        .goal-section p {
+            font-size: .84rem;
+            line-height: 1.7;
+            color: var(--mu);
+            max-width: 700px;
+        }
+        
+        .goal-icon {
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+        
+        @media(max-width:900px) {
+            .about-layout {
+                grid-template-columns: 1fr;
+            }
+            .focus-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .stats-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media(max-width:600px) {
+            .about-hero {
+                padding: 45px 0 30px;
+            }
+            .about-main,
+            .profile-card,
+            .tech-section,
+            .goal-section {
+                padding: 22px;
+            }
+            .focus-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-section {
+                grid-template-columns: 1fr 1fr;
+            }
+            .goal-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .goal-icon {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bar"></div>
+    <header id="hd">
+        <div class="wrap bar">
+            <a class="logo" href="index.html">praveen<i>.</i>s</a>
+            <nav id="nav" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="education.html">Education</a>
+                <a href="Intern_experience.html">Intern_Experiences</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a class="btn p r" href="resume.html">Resume</a>
+            <button id="ham" aria-label="Open menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+    <main>
+        <section class="about-hero wrap">
+            <div class="about-badge"><span></span> About Me</div>
+            <h1>Turning ideas into <span>real-world solutions.</span></h1>
+            <p>I'm Praveen S, a Computer Science Engineering student and aspiring Full Stack Developer who enjoys building useful, responsive, and visually engaging digital experiences.</p>
+        </section>
+        <section class="wrap">
+            <div class="about-layout">
+                <div class="about-main">
+                    <h2>Who I am</h2>
+                    <p>I'm currently pursuing my B.E. in Computer Science and Engineering at Mahendra College of Engineering, with an expected graduation in 2027.</p>
+                    <p>I enjoy turning challenging problems into clean and practical software. My experience spans full-stack web development, Java, Python, machine learning, data science, and modern UI development.</p>
+                    <p>I learn best by building projects from end to end — understanding the problem, designing the solution, developing the application, testing it, and continuously improving it.</p>
+                    <p>I'm especially interested in opportunities where I can work with experienced teams, contribute to real-world products, strengthen my technical skills, and learn new technologies.</p>
+                    <div class="about-highlight">
+                        <p>💡 My approach: understand the problem → break it down → build the solution → test it → improve it.</p>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-circle">PS</div>
+                    <h2>Praveen S</h2>
+                    <div class="profile-role">CSE Student · Full Stack Developer</div>
+                    <p>Passionate about software development, intelligent applications, and creating meaningful digital experiences.</p>
+                    <div class="profile-info">
+                        <div><span>Education</span><span>B.E. CSE</span></div>
+                        <div><span>College</span><span>Mahendra College</span></div>
+                        <div><span>Graduation</span><span>2027</span></div>
+                        <div><span>Focus</span><span>Full Stack + AI/ML</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-section">
+                <div class="stat-card">
+                    <strong>2027</strong>
+                    <span>Expected Graduation</span>
+                </div>
+                <div class="stat-card">
+                    <strong>8.27</strong>
+                    <span>Current CGPA</span>
+                </div>
+                <div class="stat-card">
+                    <strong>6+</strong>
+                    <span>Projects</span>
+                </div>
+                <div class="stat-card">
+                    <strong>15+</strong>
+                    <span>Technologies</span>
+                </div>
+            </div>
+            <div class="focus-section">
+                <div class="section-heading">
+                    <h2>What I focus on</h2>
+                    <p>Areas where I enjoy learning, experimenting, and building.</p>
+                </div>
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <div class="focus-number">01</div>
+                        <div class="focus-icon">🌐</div>
+                        <h3>Full Stack Development</h3>
+                        <p>Building responsive frontend experiences and connecting them with backend APIs, databases, and application logic.</p>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-number">02</div>
+                        <div class="focus-icon">🤖</div>
+                        <h3>AI & Machine Learning</h3>
+                        <p>Exploring machine learning, data analysis, predictive models, and intelligent solutions for practical problems.</p>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-number">03</div>
+                        <div class="focus-icon">💻</div>
+                        <h3>Web Development</h3>
+                        <p>Building modern, responsive, and user-friendly websites with clean code, interactive features, and seamless performance across devices.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="goal-section">
+                <div>
+                    <h2>What's next? 🚀</h2>
+                    <p>My goal is to grow as a software developer by working on real-world applications, contributing to meaningful projects, collaborating with talented teams, and continuously improving my problem-solving and development skills.</p>
+                </div>
+                <div class="goal-icon">⚡</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            <div><b style="color:var(--tx)">Praveen S</b><br>Designing, developing, and turning ideas into reality.</div>
+            <div class="soc" style="margin:0">
+                <a href="https://github.com/praveen9102005" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+                <a href="https://www.linkedin.com/in/praveen-s-cse/" target="_blank" rel="noopener" aria-label="LinkedIn">In</a>
+                <a href="mailto:lettertopraveen2005@gmail.com" aria-label="Email">@</a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            </div>
+            <div>© 2026 Praveen S. All rights reserved.</div>
+        </div>
+    </footer>
+    <button id="top" aria-label="Back to top">↑</button>
+    <div id="toast" role="status"></div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

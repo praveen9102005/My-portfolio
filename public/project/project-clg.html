@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>College Webpage – CSE | Praveen S</title>
+    <meta name="description" content="Mahendra College of Engineering CSE Department Website developed by Praveen S.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <div id="bar"></div>
+    <header id="hd">
+        <div class="wrap bar">
+            <a class="logo" href="../index.html">praveen<i>.</i>s</a>
+            <nav id="nav" aria-label="Main">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../skills.html">Skills</a>
+                <a href="../projects.html">Projects</a>
+                <a href="../education.html">Education</a>
+                <a href="../Intern_experience.html">Intern_Experiences</a>
+                <a href="../certifications.html">Certifications</a>
+                <a href="../resume.html">Resume</a>
+                <a href="../contact.html">Contact</a>
+            </nav>
+            <a class="btn p r" href="../resume.html">Resume</a>
+            <button id="ham" aria-label="Open menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+    <main>
+        <section class="pg wrap det">
+            <a class="btn" href="../projects.html">← Back to projects</a>
+            <h1 style="font-size:clamp(2rem,5vw,3.4rem);margin-top:26px">College Webpage – CSE Department</h1>
+            <div class="tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+                <span>Firebase</span>
+            </div>
+            <div class="project-slider">
+                <div class="slider-images">
+                    <img src="../../project_photo/CLG1.png" class="project-image active" alt="Mahendra College CSE Website Homepage">
+                    <img src="../../project_photo/CLG2.png" class="project-image" alt="Mahendra College CSE Faculty Page">
+                    <img src="../../project_photo/CLG3.png" class="project-image" alt="Mahendra College CSE Labs Page">
+                </div>
+                <button class="slider-btn prev" onclick="changeProjectImage(-1)" aria-label="Previous image">❮</button>
+                <button class="slider-btn next" onclick="changeProjectImage(1)" aria-label="Next image">❯</button>
+                <div class="image-counter"><span id="currentImage">1</span> / <span id="totalImages">5</span></div>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="showProjectImage(0)"></span>
+                    <span class="dot" onclick="showProjectImage(1)"></span>
+                    <span class="dot" onclick="showProjectImage(2)"></span>
+                    <span class="dot" onclick="showProjectImage(3)"></span>
+                    <span class="dot" onclick="showProjectImage(4)"></span>
+                </div>
+            </div>
+            <h2>Overview</h2>
+            <p>The College Webpage – CSE is a responsive departmental website developed for the Department of Computer Science and Engineering at Mahendra College of Engineering. The website provides students, faculty members and visitors with centralized
+                access to departmental information, facilities, achievements and academic resources.</p>
+            <h2>Problem</h2>
+            <p>Department-related information such as faculty details, laboratory facilities, student achievements and important announcements can be difficult to access when information is distributed across different sources.</p>
+            <p>The goal of this project was to create a centralized, visually organized and responsive web platform for the CSE department.</p>
+            <h2>Solution</h2>
+            <p>I developed a structured CSE department website with dedicated pages for faculty information, user login, laboratories and achievements.</p>
+            <p>The website uses reusable navigation, responsive layouts, interactive JavaScript components and organized content sections to provide a consistent user experience across desktop and mobile devices.</p>
+            <h2>Key Features</h2>
+            <ul>
+                <li>Responsive CSE department website</li>
+                <li>Mahendra College of Engineering branding and department information</li>
+                <li>Faculty information page</li>
+                <li>Student and faculty login interface</li>
+                <li>Computer Science laboratory information</li>
+                <li>Achievements section with dedicated pages</li>
+                <li>Announcement slider for important updates</li>
+                <li>Vision and Mission sections</li>
+                <li>Responsive mobile navigation</li>
+                <li>Interactive JavaScript components</li>
+                <li>Social media and contact information</li>
+            </ul>
+            <h2>Website Modules</h2>
+            <div class="arch">
+                <span>Home</span><i>→</i>
+                <span>Faculty</span><i>→</i>
+                <span>Login</span><i>→</i>
+                <span>Labs</span><i>→</i>
+                <span>Achievements</span>
+            </div>
+            <h2>System Architecture</h2>
+            <div class="arch">
+                <span>HTML Structure</span><i>→</i>
+                <span>CSS / Responsive UI</span><i>→</i>
+                <span>JavaScript</span><i>→</i>
+                <span>Department Pages</span><i>→</i>
+                <span>User Interface</span>
+            </div>
+            <h2>Technology Stack</h2>
+            <ul>
+                <li><strong>HTML5</strong> – Website structure and semantic content</li>
+                <li><strong>CSS3</strong> – Styling, layouts and responsive design</li>
+                <li><strong>JavaScript</strong> – Navigation and interactive functionality</li>
+                <li><strong>Font Awesome</strong> – Interface and social media icons</li>
+                <li><strong>Firebase Admin</strong> – Project dependency for backend-related integration</li>
+                <li><strong>Git & GitHub</strong> – Version control and project management</li>
+            </ul>
+            <h2>Major Pages</h2>
+            <ul>
+                <li><strong>Home:</strong> Department introduction, announcements, vision and mission.</li>
+                <li><strong>Faculty:</strong> Faculty members and their professional information.</li>
+                <li><strong>Login:</strong> Entry point for authenticated department users.</li>
+                <li><strong>Labs:</strong> Information about the department's computer laboratories.</li>
+                <li><strong>Achievements:</strong> Student and department achievements presented through a dedicated section.</li>
+            </ul>
+            <h2>Challenges</h2>
+            <p>One of the main challenges was organizing multiple department modules while maintaining a consistent design across all pages.</p>
+            <p>Another challenge was creating responsive layouts that work properly on different screen sizes while keeping navigation and content easy to access.</p>
+            <h2>What I Learned</h2>
+            <ul>
+                <li>Designing responsive multi-page websites</li>
+                <li>Structuring a real-world departmental website</li>
+                <li>Creating reusable navigation components</li>
+                <li>Implementing interactive JavaScript functionality</li>
+                <li>Organizing project assets and page structures</li>
+                <li>Managing and publishing projects using GitHub</li>
+            </ul>
+            <h2>Future Improvements</h2>
+            <p>Future versions can include complete role-based authentication for students, faculty and administrators, database-driven profiles, an admin dashboard, student dashboards, online notices and dynamic achievement management.</p>
+            <div class="row">
+                <a class="btn" href="https://github.com/praveen9102005/College-webpage-CSE" target="_blank" rel="noopener">GitHub Repository</a>
+                <a class="btn p" href="../contact.html">Ask for a Demo</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            <div><b style="color:var(--tx)">Praveen S</b><br>Designing, developing, and turning ideas into reality.</div>
+            <div class="soc" style="margin:0">
+                <a href="https://github.com/praveen9102005" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+                <a href="https://www.linkedin.com/in/praveen-s-cse/" target="_blank" rel="noopener" aria-label="LinkedIn">In</a>
+                <a href="mailto:lettertopraveen2005@gmail.com" aria-label="Email">@</a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            </div>
+            <div>© 2026 Praveen S. All rights reserved.</div>
+        </div>
+    </footer>
+    <button id="top" aria-label="Back to top">↑</button>
+    <div id="toast" role="status"></div>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

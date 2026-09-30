@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate | Praveen S</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="certificate-page">
+            <h1>Certificate</h1>
+            <img id="certificateImage" class="certificate-image" src="" alt="Certificate">
+            <a href="../certifications.html" class="back-btn">← Back to Certifications</a>
+        </section>
+    </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const image = params.get("img");
+        const certificateImage = document.getElementById("certificateImage");
+        if (image) {
+            certificateImage.src = image;
+        }
+    </script>
+</body>
+
+</html>
